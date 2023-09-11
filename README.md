@@ -2,7 +2,7 @@
 
 s7client is a simple Siemens S7 TCP client.
 
-# Supported Modbus Functions
+# Supported Functions
 
 - Read Data Blocks
 
