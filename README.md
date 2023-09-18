@@ -34,7 +34,7 @@ go get -u github.com/ermanimer/s7client
 
 - **Read(p []byte, unitID byte, addr uint16, count uint16) (n int, err error):** Read reads data from a data block of a s7 device and writes it to the provided payload. Returns the read-byte count and a s7client.ErrNotconnected if the client is not connected to the server.
 	
-- **ReadErr(p []byte) error:** ReadErr parses and returns the Modbus read error of the provided payload. Returns a modbusclient.ErrShortResponse if the payload is short.
+- **ReadErr(p []byte) error:** ReadErr parses and returns the read error of the provided payload. Returns a s7client.ErrShortResponse if the payload is short.
 
 - **Bool(p []byte, offset int, index int) (bool, error):** Bool parses and returns a bool value fron the provided payload. Returns a s7client.ErrShortResponse if the payload is short.
 
@@ -59,7 +59,7 @@ go get -u github.com/ermanimer/s7client
 
 # Sample Application
 
-The sample application demonstrates reading a sample value from a Modbus device with constant intervals- ** 
+The sample application demonstrates reading a sample value from a s7 device.** 
 
 ```go
 package main
