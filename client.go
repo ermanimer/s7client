@@ -40,7 +40,7 @@ type Client interface {
 	// Read reads data from a data block of a s7 device and writes it to the provided payload. Returns the read-byte count and a s7client.ErrNotconnected if the client is not connected to the server.
 	Read(p []byte, dataBlockNum uint16, addr uint32, count uint16) (n int, err error)
 
-	// ReadErr parses and returns the Modbus read error of the provided payload. Returns a modbusclient.ErrShortResponse if the payload is short.
+	// ReadErr parses and returns the read error of the provided payload. Returns a s7client.ErrShortResponse if the payload is short.
 	ReadErr(p []byte) error
 
 	// Bool parses and returns a bool value fron the provided payload. Returns a s7client.ErrShortResponse if the payload is short.
